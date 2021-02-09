@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="sytle.css">
+
+    <script>
+        function validateform() {
+            var a = document.forms["login"]["email"].value;
+            var b = document.forms["login"]["password"].value;
+            var email = a.indexOf("@");
+            if (a == "" || email < 1) {
+                alert("email is must be filled or invalid email");
+                return true;
+
+            }
+
+            if (b == "") {
+                alert("password is must be filled");
+                return flase;
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse" style="margin:0px;">
+
+        <div class="container-fluid">
+            <div class="row titlebar">
+
+                <div class="col-sm-3 col-lg-3 col-md-3  col-xs-4">
+                    <div class="logo">
+                        <img class="logo" src="logo.png" alt="!AgileTeam">
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-6  col-xs-4 ">
+                    <div class="title ">
+                        <strong class="title"> Agile Soft System </strong>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-2 col-lg-2 col-md-2 "></div>
+
+                <div class="col-sm-1 col-lg-1 col-md-1  c   ol-xs-4">
+
+                </div>
+
+            </div>
+    </nav>
+
+    <div class="row">
+        <div class="card">
+            <img src="login.jpeg" class="imgs" >
+            <form action="adminlog" name="login" class="form-horizontal" onsubmit="validateform()">
+                <p style="padding-left:150px;color:crimson; font-family: sans-serif;font-size: 50px">Admin Login </p>
+                <p style="padding-left:20px">Email Id </p>
+                 <p style="padding-left:20px; width:500px ">
+                   <input type="text" class="form-control" id="email" placeholder="Email">
+                    </p>
+                
+                <p style="padding-left:20px">Password</p>
+                <p style="padding-left:20px; width:500px ">
+                   <input type="password" class="form-control" id="password" placeholder="Password">
+                    
+                </p>
+                <p align="center">
+                    <button style="height:40px" type="submit" class="btn btn-default mybutton">Sign in</button>
+                </p>
+                <br>    
+                
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
